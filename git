@@ -1,0 +1,24 @@
+git init -> initialize
+git status -> status
+git add file -> add file to git
+git add -A -> add all file to git
+git commit -m ''-> commit file
+git log
+git diff HEAD -> show differences for untrack  file
+git diff --staged -> show differences for staged file
+git reset file -> file out from stage
+git checkout -- file -> return file to last commit
+git branch -> show branches
+git branch name -> add branch name
+git branch -d name -> delete branch name
+git rm file -> remove file
+git merge branchname
+git clone address -> take address from github
+git pull origin master
+git push origin master -> add master to github
+git remote add remotename remoteaddress
+git remote -v -> list of remotes
+git tag -a v2.0 -m 'message'
+git pushh origin --tags
+git help dd
+git blame file -Lnum -> history of line  num file

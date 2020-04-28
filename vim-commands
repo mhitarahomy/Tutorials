@@ -1,0 +1,16 @@
+i -> insert mode   esc:exit insert mode
+x, X -> delete one char
+o, O -> open new line
+J -> Join
+r -> replace one char
+a -> append
+u -> undo
+d -> delete (dw, dd)
+G -> go to line (10G, 1G, G)
+y -> yank/copy (yy, yw)
+p, P -> paste
+/x -> search for x (n, N)
+$ -> end of line
+^ -> start of line
+. -> repeat command
+:wq -> write quit
