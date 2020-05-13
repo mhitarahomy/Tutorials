@@ -1,0 +1,36 @@
+--set DNS
+185.51.200.2, 178.22.122.100
+
+
+--Softwares
+sudo apt install vim
+sudo apt install python3-pip
+pip3 install -U pip
+sudo apt install git
+sudo apt-get install chrome-gnome-shell
+sudo apt-get install ubuntu-restricted-extras
+
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
+
+apt search gnome-shell-extension
+sudo apt install  gnome-shell-extension-gsconnect
+sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
+
+
+--Add custom resolution
+xrandr
+cvt 1600 900
+sudo xrandr --newmode "1600x900_60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
+sudo xrandr --addmode eDP-1 "1600x900_60.00"
+gedit ~/.profile -> Add two lines
+
+
+--Install Farsi Fonts
+git clone https://github.com/fzerorubigd/persian-fonts-linux.git
+cd persian-fonts-linux/
+./farsifonts.sh
+
+
+--git config
+git config --global user.email "mhitarahomy@gmail.com"
