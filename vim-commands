@@ -1,16 +1,65 @@
 i -> insert mode   esc:exit insert mode
 x, X -> delete one char
-o, O -> open new line
 J -> Join
 r -> replace one char
 a -> append
-u -> undo
-d -> delete (dw, dd)
 G -> go to line (10G, 1G, G)
-y -> yank/copy (yy, yw)
-p, P -> paste
 /x -> search for x (n, N)
-$ -> end of line
-^ -> start of line
-. -> repeat command
 :wq -> write quit
+
+-----movement
+h    j    k  l
+left down up right
+Ctrl+E -> Scroll the window down
+Ctrl+Y -> Scroll the window up
+Ctrl+F -> Scroll down one page
+Ctrl+B -> Scroll up one page
+H -> move cursor to the top of the window
+M -> move cursor to the middle of the window
+L -> move cursor to the bottom of the window
+gg -> go to top of file
+GG -> go to bottom of file
+
+-----text objects
+w -> word ( e -> end of word)
+s -> sentences
+p -> paragraphs
+t -> tags (in xml & html files)
+
+----- motions
+a -> all
+i -> in
+t -> 'til
+f -> find forward
+F -> find backward
+
+-----commands
+d -> delete (also cut)
+c -> change (delete then place in insert mode)
+y -> yank (copy)
+v -> visually select
+
+-----combinations
+diw -> delete in word
+caw -> change all word
+yi) -> yank all text inside parentheses
+ya) -> yank all text inside parentheses with parentheses
+va" -> visually select all inside " including "
+
+-----additional commands
+. -> repeat command
+u -> undo
+dd/yy -> delete / yank the current line
+p/P -> paste below / above line
+D/C -> delete / change unttil end of file
+^/$ -> move to the beginning / end of line
+I/A -> move to the beginning / end of line and insert
+o/O -> insert new line above / below current line and insert
+
+-----macro
+record macro:
+d {register}
+(do the things)
+q
+play macro:
+@{register}
