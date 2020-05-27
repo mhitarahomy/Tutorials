@@ -49,6 +49,12 @@ sudo make uninstall
 ~/.vimrc -> autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
             autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+--install Vundle
+ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+--install YCM
+sudo apt install mono-complete nodejs npm
+sudo snap install go
 
 --Add custom resolution
 xrandr
