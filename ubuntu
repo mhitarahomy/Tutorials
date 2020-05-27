@@ -18,6 +18,21 @@ sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1
 
 sudo apt install tmux
 
+--Python config
+sudo apt-get install libffi-dev libgdbm-dev libsqlite3-dev libssl-dev zlib1g-dev cmake curl
+export PYTHON_VERSION=3.8.2
+export PYTHON_MAJOR=3
+curl -O https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
+tar -xvzf Python-${PYTHON_VERSION}.tgz
+cd Python-${PYTHON_VERSION}
+./configure \
+    --prefix=/opt/python/${PYTHON_VERSION} \
+    --enable-shared \
+    --enable-ipv6 \
+    LDFLAGS=-Wl,-rpath=/opt/python/${PYTHON_VERSION}/lib,--disable-new-dtags
+make
+sudo make install
+
 --vim config
 sudo apt purge vim
 sudo apt-get install libncurses5-dev libncursesw5-dev
