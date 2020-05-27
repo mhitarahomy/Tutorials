@@ -55,6 +55,9 @@ sudo make uninstall
 --install YCM
 sudo apt install mono-complete nodejs npm
 sudo snap install go
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --all
+
 
 --Add custom resolution
 xrandr
