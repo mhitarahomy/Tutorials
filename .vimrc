@@ -79,5 +79,10 @@ set wildignore=*.swp,*.bak,*.pyc
 set visualbell
 set noerrorbells
 
+set wildmode=longest,list,full
+set wildmenu
+
+set backspace=indent,eol,start  " more powerful backspacing
+
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!clear; python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!clear; python3' shellescape(@%, 1)<CR>
